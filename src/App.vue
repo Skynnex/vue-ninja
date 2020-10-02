@@ -1,27 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <Navbar />
+  <div class="container" style="margin-top: 70px">
+    <RouterView v-slot="{ Component }">
+      <Alert v-if="error" variant="danger" :dismissible="true" @click="error = false">An error occurred while loading.</Alert>
+      <Suspense v-else timeout="0">
+        <component :is="Component" />
+        <template #fallback>Loading...</template>
+      </Suspense>
+    </RouterView>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
-
+import { defineComponent, onErrorCaptured, ref } from 'vue';
+import Navbar from '@/components/Navbar.vue';
 export default defineComponent({
-  name: "App",
+  name: 'App',
+
   components: {
-    HelloWorld
+    Navbar
+  },
+  setup() {
+    const error = ref(false);
+    onErrorCaptured(() => {
+      error.value = true;
+      return true;
+    });
+    return { error };
   }
 });
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~font-awesome/css/font-awesome.min.css';
 </style>
