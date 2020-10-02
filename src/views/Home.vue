@@ -6,6 +6,8 @@
 
     <div>
       <router-link class="button button-primary" :to="{ name: 'races' }">Races</router-link>
+    </div>
+    <div>
       <router-link class="button button-primary" :to="{ name: 'register' }">Register</router-link>
     </div>
   </div>

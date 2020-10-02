@@ -1,36 +1,22 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 3,
-    "passes": 3,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2020-10-02T04:24:38.165Z",
-    "end": "2020-10-02T04:24:53.066Z",
-    "duration": 14901
+    "start": "2020-10-02T13:46:48.933Z",
+    "end": "2020-10-02T13:46:50.987Z",
+    "duration": 2054
   },
   "suites": [
     {
-      "title": "Races",
+      "title": "Register",
       "tests": [
         {
-          "fullTitle": "Races should display a race list",
-          "title": "should display a race list",
-          "duration": 6008,
-          "result": "passed",
-          "err": {}
-        },
-        {
-          "fullTitle": "Races should display a loading error",
-          "title": "should display a loading error",
-          "duration": 3262,
-          "result": "passed",
-          "err": {}
-        },
-        {
-          "fullTitle": "Races should display ponies",
-          "title": "should display ponies",
-          "duration": 3849,
+          "fullTitle": "Register should display a register page",
+          "title": "should display a register page",
+          "duration": 1996,
           "result": "passed",
           "err": {}
         }
@@ -41,23 +27,9 @@
   "failures": [],
   "passes": [
     {
-      "fullTitle": "Races should display a race list",
-      "title": "should display a race list",
-      "duration": 6008,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Races should display a loading error",
-      "title": "should display a loading error",
-      "duration": 3262,
-      "result": "passed",
-      "err": {}
-    },
-    {
-      "fullTitle": "Races should display ponies",
-      "title": "should display ponies",
-      "duration": 3849,
+      "fullTitle": "Register should display a register page",
+      "title": "should display a register page",
+      "duration": 1996,
       "result": "passed",
       "err": {}
     }

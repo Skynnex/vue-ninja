@@ -1,6 +1,6 @@
 import { RaceModel } from '@/models/RaceModel';
-
 import axios from 'axios';
+
 export function useRaceService() {
   return {
     async list(): Promise<Array<RaceModel>> {
